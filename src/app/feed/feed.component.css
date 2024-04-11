@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  gap: 90dvh;
+}
+
+section {
+  --color: 127 127 127;
+
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 2px solid #ddd;
+}
