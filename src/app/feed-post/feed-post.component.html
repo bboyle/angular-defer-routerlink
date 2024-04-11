@@ -1,0 +1,9 @@
+<section #post>
+  <p>this is <code>app-feed-child</code> within the component</p>
+  <!-- <app-feed-child></app-feed-child> -->
+
+  @defer (on viewport(post)) {
+  <p>this is <code>app-feed-child</code> within a <code>defer</code> block</p>
+  <app-feed-child></app-feed-child>
+  }
+</section>

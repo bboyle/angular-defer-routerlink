@@ -3,12 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'about',
-    loadComponent: () =>
-      import('./about/about.component').then((m) => m.AboutComponent),
+    loadChildren: () =>
+      import('./about/about.routes').then((m) => m.ABOUT_ROUTES),
   },
   {
     path: 'feed/:id',
-    loadComponent: () =>
-      import('./feed/feed.component').then((m) => m.FeedComponent),
+    loadChildren: () => import('./feed/feed.routes').then((m) => m.FEED_ROUTES),
   },
 ];

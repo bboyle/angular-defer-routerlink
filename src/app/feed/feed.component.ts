@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FeedChildComponent } from '../feed-child/feed-child.component';
+import { FeedPostComponent } from '../feed-post/feed-post.component';
 
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [RouterLink, FeedChildComponent],
+  imports: [RouterLink, FeedPostComponent],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.css',
 })

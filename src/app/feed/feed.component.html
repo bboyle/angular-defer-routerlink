@@ -3,15 +3,10 @@
   <p>scroll down…</p>
 </section>
 
-<section>
-  <p>this is <code>app-feed-child</code> within the component</p>
-  <app-feed-child></app-feed-child>
-  <p>scroll down…</p>
-</section>
-
-<section #section>
-  @defer (on viewport(section)) {
-  <p>this is <code>app-feed-child</code> within a <code>defer</code> block</p>
-  <app-feed-child></app-feed-child>
+<ol>
+  @for (i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; track i) {
+  <li>
+    <app-feed-post></app-feed-post>
+  </li>
   }
-</section>
+</ol>
