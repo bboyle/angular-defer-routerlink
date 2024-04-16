@@ -17,5 +17,33 @@ nav {
 
 .active {
   font-weight: bold;
-  background: yellow;
+  outline: 3px solid #000;
+}
+
+aside {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 25em;
+}
+
+a {
+  padding: 0.3em 1em;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 10%);
+}
+
+a[href*="red"] {
+  background: red;
+  color: white;
+}
+
+a[href*="green"] {
+  background: green;
+  color: white;
+}
+
+a[href*="blue"] {
+  background: blue;
+  color: white;
 }

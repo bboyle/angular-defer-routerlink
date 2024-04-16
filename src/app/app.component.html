@@ -2,9 +2,39 @@
 
 <nav>
   <a routerLinkActive="active" routerLink="/about">About</a>
+  <a routerLinkActive="active" routerLink="/course/green/feed/all"
+    >Green Feed</a
+  >
   <a routerLinkActive="active" routerLink="/feed/red">Red Feed</a>
-  <a routerLinkActive="active" routerLink="/feed/green">Green Feed</a>
-  <a routerLinkActive="active" routerLink="/feed/blue">Blue Feed</a>
+  <a routerLinkActive="active" routerLink="/course/blue/feed/all">Blue Feed</a>
 </nav>
 
 <router-outlet></router-outlet>
+
+<aside>
+  <p>Test instructions:</p>
+  <ol>
+    <li>Visit the green feed: (links should be green)</li>
+    <li>Visit the red feed: (links should be red)</li>
+    <li>Visit the blue feed: (links should be blue)</li>
+  </ol>
+
+  <p>Reload any page to reset the application.</p>
+
+  <p>
+    The bug we are trying to introduce is where the links on the blue feed are
+    green because the "active route" is picking up the previous value within the
+    defer block and routerLink is rendering that in the link href attribute.
+  </p>
+
+  <p>The bug is caused when a child component:</p>
+  <ul>
+    <li>is lazy loaded using defer, AND</li>
+    <li>uses routerLink="[]", AND</li>
+    <li>imports MatTooltipModule</li>
+  </ul>
+  <p>
+    When these conditions are true, routerLink will render the incorrect URL
+    after navigating.
+  </p>
+</aside>

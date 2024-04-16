@@ -1,0 +1,14 @@
+<dl>
+  <dt>courseID:</dt>
+  <dd>{{ data()?.courseID }}</dd>
+</dl>
+
+@if (posts$|async; as posts) {
+<ol>
+  @for (i of posts$|async; track i) {
+  <li>
+    <app-feed-post [n]="i"></app-feed-post>
+  </li>
+  }
+</ol>
+}

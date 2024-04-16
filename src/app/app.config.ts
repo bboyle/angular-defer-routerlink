@@ -8,6 +8,7 @@ import {
 import { BrowserModule } from '@angular/platform-browser';
 import { ElfNgRouterStoreModule } from '@ngneat/elf-ng-router-store';
 import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +17,6 @@ export const appConfig: ApplicationConfig = {
       routes,
       withRouterConfig({ paramsInheritanceStrategy: 'always' }),
       withViewTransitions()
-    ),
+    ), provideAnimationsAsync(),
   ],
 };
